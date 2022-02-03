@@ -3,7 +3,7 @@
   <div class="flex justify-between form-group">
 
     <% if form.object.persisted? %>
-      <%= button_to form.object, class: "btn btn-danger outline", method: :delete, data: { confirm: t("are_you_sure") } do %>
+      <%= form.button class: "btn btn-danger outline" do %>
         Unfollow
       <% end %>
     <% else %>
