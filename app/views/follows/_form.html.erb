@@ -1,0 +1,15 @@
+<%= form_with(model: follow) do |form| %>
+
+  <div class="flex justify-between form-group">
+
+    <% if form.object.persisted? %>
+      <%= button_to form.object, class: "btn btn-danger outline", method: :delete, data: { confirm: t("are_you_sure") } do %>
+        Unfollow
+      <% end %>
+    <% else %>
+      <%= form.button class: "btn btn-primary" do %>
+        Follow
+      <% end %>
+    <% end %>
+  </div>
+<% end %>
